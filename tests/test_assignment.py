@@ -2,6 +2,9 @@ import pytest
 from unittest.mock import patch
 from io import StringIO
 import sys
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 def test_spell_word():
     # Redirect stdout to capture print statements
