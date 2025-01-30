@@ -1,9 +1,26 @@
 import pytest
-from src.assignment import example_function
+from unittest.mock import patch
+from io import StringIO
+import sys
 
-def test_example():
-    """
-    Example test case.
-    Replace with actual test cases for your assignment.
-    """
-    assert example_function() == None  # Replace with actual test
+def test_spell_word():
+    # Redirect stdout to capture print statements
+    captured_output = StringIO()
+    sys.stdout = captured_output
+    
+    # Import and run the student's function
+    from assignment import spell_word
+    spell_word()
+    
+    # Get the printed output
+    output = captured_output.getvalue().strip()
+    
+    # Reset stdout
+    sys.stdout = sys.__stdout__
+    
+    # Split output into lines and remove any empty lines
+    letters = [line.strip() for line in output.split('\n') if line.strip()]
+    
+    # Check if the letters spell "PYTHON"
+    expected = ["P", "Y", "T", "H", "O", "N"]
+    assert letters == expected, f"Expected the letters to spell 'PYTHON', but got {''.join(letters)}"
