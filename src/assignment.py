@@ -2,9 +2,9 @@
 # Don't change the print statements, just move them around.
 
 def spell_word():
-    print("N")
-    print("O")
+    print("N") 
     print("H")
-    print("T")
     print("Y")
     print("P")
+    print("T")
+    print("O")
