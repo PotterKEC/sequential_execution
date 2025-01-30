@@ -1,11 +1,10 @@
-"""
-Template for student assignments.
-Replace this with your actual assignment content.
-"""
+# Arrange these print statements to spell out a secret word!
+# Don't change the print statements, just move them around.
 
-def example_function():
-    """
-    Example function to be implemented by students.
-    Replace with actual assignment functions.
-    """
-    pass
+def spell_word():
+    print("N")
+    print("O")
+    print("H")
+    print("T")
+    print("Y")
+    print("P")
